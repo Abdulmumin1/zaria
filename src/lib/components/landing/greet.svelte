@@ -21,6 +21,6 @@
     }
   </script>
   
-  <div class=" {bgColor} mb-6">
+  <div class=" mb-6">
     <h1 class="text-4xl font-bold text-white">Good {timeOfDay} <span class="bg-white text-primary">Zaria</span></h1>
   </div>

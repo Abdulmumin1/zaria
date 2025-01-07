@@ -162,6 +162,7 @@
 	}
 </script>
 
+{#if !completed}
 <form onsubmit={handleSubmit} action="?/new" class="space-y-6">
 	<div class="space-y-2">
 		<Label for="name">Business Name</Label>
@@ -288,6 +289,11 @@
 		{/if}
 	</Button>
 </form>
+{:else}
+<div>
+	Thank you for submiting your business. we will reach out to you via email to complete the process!
+</div>
+{/if}
 
 <!-- Image Previews -->
 <!-- <div class="space-y-4">
