@@ -77,22 +77,22 @@
 	];
 </script>
 
-<div onclick={openGoogleTranslateLanguageSelector} class="flex items-center justify-between bg-primary/10 px-2">
+<!-- <div onclick={openGoogleTranslateLanguageSelector} class="flex items-center justify-between bg-primary/10 px-2">
 	<h4 class="text-base  py-2" >Change Language {#each languages as lang}
 		
 		
 			<span class="text-xs font-normal">, {lang.name} </span>
 		
 	{/each}</h4>
-	<!-- <div class="language-switcher mx-auto">
+	<div class="language-switcher mx-auto">
 		{#each languages as lang}
 			<button onclick={() => changeLanguage(lang.name)} class="text-xs">
 				{lang.flag}
 				{lang.name}
 			</button>
 		{/each}
-	</div> -->
-</div>
+	</div>
+</div> -->
 <header class="bg-white shadow-sm">
 	<div class="container mx-auto flex items-center justify-between px-4 py-4">
 		<!-- Logo -->
