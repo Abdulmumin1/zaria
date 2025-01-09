@@ -52,105 +52,105 @@ const news = [
 
 	let images = [
 		{
-			src: '/img/zazzau.png',
+			src: 'https://zaariagallery.s3.af-south-1.amazonaws.com/landing/zazzau.png',
 			title: 'Zazzau Palace ',
 			description: 'One of the historic landmarks of Zaria.'
 		},
 		{
-			src: '/img/12.png',
+			src: 'https://zaariagallery.s3.af-south-1.amazonaws.com/landing/12.png',
 			title: 'City Park',
 			description: 'Perfect for relaxation and family outings.'
 		},
 		{
-			src: '/img/cool.png',
+			src: 'https://zaariagallery.s3.af-south-1.amazonaws.com/landing/cool.png',
 			title: 'Market Square',
 			description: 'A hub of activity and commerce.'
 		},
-		{ src: '/img/rock.png', title: 'Zaria Hills', description: 'Breathtaking natural beauty.' },
-		{ src: '/img/14.png', title: 'Zaria Hills', description: 'Breathtaking natural beauty.' },
+		{ src: 'https://zaariagallery.s3.af-south-1.amazonaws.com/landing/rock.png', title: 'Zaria Hills', description: 'Breathtaking natural beauty.' },
+		{ src: 'https://zaariagallery.s3.af-south-1.amazonaws.com/landing/14.png', title: 'Zaria Hills', description: 'Breathtaking natural beauty.' },
 		{
-			src: '/img/culture.png',
+			src: 'https://zaariagallery.s3.af-south-1.amazonaws.com/landing/culture.png',
 			title: 'Cultural Festival',
 			description: 'Celebrating our rich heritage.'
 		},
 		{
-			src: '/img/abu.png',
+			src: 'https://zaariagallery.s3.af-south-1.amazonaws.com/landing/abu.png',
 			title: 'Learning Center',
 			description: 'A beacon of knowledge and education.'
 		},
 		{
-			src: '/img/13.png',
+			src: 'https://zaariagallery.s3.af-south-1.amazonaws.com/landing/13.png',
 			title: 'Learning Center',
 			description: 'A beacon of knowledge and education.'
 		},
 		{
-			src: '/img/11.png',
+			src: 'https://zaariagallery.s3.af-south-1.amazonaws.com/landing/11.png',
 			title: 'City Park',
 			description: 'Perfect for relaxation and family outings.'
 		},
 		{
-			src: '/img/musa_gate.png',
+			src: 'https://zaariagallery.s3.af-south-1.amazonaws.com/landing/musa_gate.png',
 			title: 'City Park',
 			description: 'Perfect for relaxation and family outings.'
 		},
 		{
-			src: '/img/1.png',
+			src: 'https://zaariagallery.s3.af-south-1.amazonaws.com/landing/1.png',
 			title: 'City Park',
 			description: 'Perfect for relaxation and family outings.'
 		},
 		{
-			src: '/img/8.png',
+			src: 'https://zaariagallery.s3.af-south-1.amazonaws.com/landing/8.png',
 			title: 'City Park',
 			description: 'Perfect for relaxation and family outings.'
 		},
 		{
-			src: '/img/9.png',
+			src: 'https://zaariagallery.s3.af-south-1.amazonaws.com/landing/9.png',
 			title: 'City Park',
 			description: 'Perfect for relaxation and family outings.'
 		},
 		{
-			src: '/img/2.png',
+			src: 'https://zaariagallery.s3.af-south-1.amazonaws.com/landing/2.png',
 			title: 'City Park',
 			description: 'Perfect for relaxation and family outings.'
 		},
 		{
-			src: '/img/3.png',
+			src: 'https://zaariagallery.s3.af-south-1.amazonaws.com/landing/3.png',
 			title: 'City Park',
 			description: 'Perfect for relaxation and family outings.'
 		},
 		{
-			src: '/img/4.png',
+			src: 'https://zaariagallery.s3.af-south-1.amazonaws.com/landing/4.png',
 			title: 'City Park',
 			description: 'Perfect for relaxation and family outings.'
 		},
 		{
-			src: '/img/5.png',
+			src: 'https://zaariagallery.s3.af-south-1.amazonaws.com/landing/5.png',
 			title: 'City Park',
 			description: 'Perfect for relaxation and family outings.'
 		},
 		{
-			src: '/img/6.png',
+			src: 'https://zaariagallery.s3.af-south-1.amazonaws.com/landing/6.png',
 			title: 'City Park',
 			description: 'Perfect for relaxation and family outings.'
 		},
 		{
-			src: '/img/15.png',
+			src: 'https://zaariagallery.s3.af-south-1.amazonaws.com/landing/15.png',
 			title: 'City Park',
 			description: 'Perfect for relaxation and family outings.'
 		},
 
 		
 		{
-			src: '/img/7.png',
+			src: 'https://zaariagallery.s3.af-south-1.amazonaws.com/landing/7.png',
 			title: 'City Park',
 			description: 'Perfect for relaxation and family outings.'
 		},
 		{
-			src: '/img/10.png',
+			src: 'https://zaariagallery.s3.af-south-1.amazonaws.com/landing/10.png',
 			title: 'City Park',
 			description: 'Perfect for relaxation and family outings.'
 		},{
-			src: '/img/16.png',
+			src: 'https://zaariagallery.s3.af-south-1.amazonaws.com/landing/16.png',
 			title: 'City Park',
 			description: 'Perfect for relaxation and family outings.'
 		},
@@ -167,7 +167,7 @@ const news = [
 				city.
 			</p>
 		</div>
-		<div class="masonry-grid mt-12 bg-[url('/img/16.png')]">
+		<div class="masonry-grid mt-12 bg-[url('https://zaariagallery.s3.af-south-1.amazonaws.com/landing/16.png')]">
 			{#each images as image}
 				<div class="masonry-item group relative overflow-hidden shadow-lg">
 					<img
