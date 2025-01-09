@@ -148,12 +148,12 @@
 					images: []
 				};
 				errors = {};
+				completed = true;
 			} else {
 				const result = await response.json();
 				alert(`Error: ${result.message}`);
 			}
 		} catch (error) {
-			completed = true;
 			// alert('An error occurred while submitting the form.');
 			console.error(error);
 		}
@@ -163,136 +163,137 @@
 </script>
 
 {#if !completed}
-<form onsubmit={handleSubmit} action="?/new" class="space-y-6">
-	<div class="space-y-2">
-		<Label for="name">Business Name</Label>
-		<Input id="name" type="text" bind:value={form.name} placeholder="Enter business name" />
-		{#if errors.name}
-			<p class="text-sm text-destructive">{errors.name}</p>
-		{/if}
-	</div>
+	<form onsubmit={handleSubmit} action="?/new" class="space-y-6">
+		<div class="space-y-2">
+			<Label for="name">Business Name</Label>
+			<Input id="name" type="text" bind:value={form.name} placeholder="Enter business name" />
+			{#if errors.name}
+				<p class="text-sm text-destructive">{errors.name}</p>
+			{/if}
+		</div>
 
-	<div class="space-y-2">
-		<Label for="category">Category</Label>
-		<Select
-			onSelectedChange={({ value }) => {
-				form.category = value;
-			}}
-		>
-			<SelectTrigger>
-				<SelectValue placeholder="Select a category" />
-			</SelectTrigger>
-			<SelectContent>
-				{#each businessCategories as category}
-					<SelectItem value={category}>{category}</SelectItem>
-				{/each}
-			</SelectContent>
-		</Select>
-		{#if errors.category}
-			<p class="text-sm text-destructive">{errors.category}</p>
-		{/if}
-	</div>
+		<div class="space-y-2">
+			<Label for="category">Category</Label>
+			<Select
+				onSelectedChange={({ value }) => {
+					form.category = value;
+				}}
+			>
+				<SelectTrigger>
+					<SelectValue placeholder="Select a category" />
+				</SelectTrigger>
+				<SelectContent>
+					{#each businessCategories as category}
+						<SelectItem value={category}>{category}</SelectItem>
+					{/each}
+				</SelectContent>
+			</Select>
+			{#if errors.category}
+				<p class="text-sm text-destructive">{errors.category}</p>
+			{/if}
+		</div>
 
-	<div class="space-y-2">
-		<Label for="description">Description</Label>
-		<Textarea
-			id="description"
-			bind:value={form.description}
-			placeholder="Describe your business"
-			class="resize-none"
-		/>
-		{#if errors.description}
-			<p class="text-sm text-destructive">{errors.description}</p>
-		{/if}
-	</div>
+		<div class="space-y-2">
+			<Label for="description">Description</Label>
+			<Textarea
+				id="description"
+				bind:value={form.description}
+				placeholder="Describe your business"
+				class="resize-none"
+			/>
+			{#if errors.description}
+				<p class="text-sm text-destructive">{errors.description}</p>
+			{/if}
+		</div>
 
-	<div class="space-y-2">
-		<Label for="address">Address</Label>
-		<Input id="address" type="text" bind:value={form.address} placeholder="Business address" />
-		{#if errors.address}
-			<p class="text-sm text-destructive">{errors.address}</p>
-		{/if}
-	</div>
+		<div class="space-y-2">
+			<Label for="address">Address</Label>
+			<Input id="address" type="text" bind:value={form.address} placeholder="Business address" />
+			{#if errors.address}
+				<p class="text-sm text-destructive">{errors.address}</p>
+			{/if}
+		</div>
 
-	<div class="space-y-2">
-		<Label for="phone">Phone</Label>
-		<Input id="phone" type="text" bind:value={form.phone} placeholder="Phone number" />
-		{#if errors.phone}
-			<p class="text-sm text-destructive">{errors.phone}</p>
-		{/if}
-	</div>
+		<div class="space-y-2">
+			<Label for="phone">Phone</Label>
+			<Input id="phone" type="text" bind:value={form.phone} placeholder="Phone number" />
+			{#if errors.phone}
+				<p class="text-sm text-destructive">{errors.phone}</p>
+			{/if}
+		</div>
 
-	<div class="space-y-2">
-		<Label for="email">Email</Label>
-		<Input id="email" type="email" bind:value={form.email} placeholder="Business email" />
-		{#if errors.email}
-			<p class="text-sm text-destructive">{errors.email}</p>
-		{/if}
-	</div>
+		<div class="space-y-2">
+			<Label for="email">Email</Label>
+			<Input id="email" type="email" bind:value={form.email} placeholder="Business email" />
+			{#if errors.email}
+				<p class="text-sm text-destructive">{errors.email}</p>
+			{/if}
+		</div>
 
-	<div class="space-y-2">
-		<Label for="website">Website (Optional)</Label>
-		<Input id="website" type="url" bind:value={form.website} placeholder="https://example.com" />
-		{#if errors.website}
-			<p class="text-sm text-destructive">{errors.website}</p>
-		{/if}
-	</div>
+		<div class="space-y-2">
+			<Label for="website">Website (Optional)</Label>
+			<Input id="website" type="url" bind:value={form.website} placeholder="https://example.com" />
+			{#if errors.website}
+				<p class="text-sm text-destructive">{errors.website}</p>
+			{/if}
+		</div>
 
-	<div class="space-y-2">
-		<Label for="images">Images</Label>
-		<Input id="images" type="file" accept="image/*" multiple on:change={handleFileChange} />
-		<p class="text-sm text-muted-foreground">Upload images of your business (max 5 images)</p>
-		{#if errors.images}
-			<p class="text-sm text-destructive">{errors.images}</p>
-		{/if}
-	</div>
+		<div class="space-y-2">
+			<Label for="images">Images</Label>
+			<Input id="images" type="file" accept="image/*" multiple on:change={handleFileChange} />
+			<p class="text-sm text-muted-foreground">Upload images of your business (max 5 images)</p>
+			{#if errors.images}
+				<p class="text-sm text-destructive">{errors.images}</p>
+			{/if}
+		</div>
 
-	<!-- Image Previews -->
-	<div class="space-y-4">
-		{#if form.images && form.images.length > 0}
-			<div class="grid grid-cols-3 gap-4">
-				{#each form.images as image, index}
-					<div class="group relative">
-						<img
-							src={URL.createObjectURL(image)}
-							alt="Preview"
-							class="h-32 w-full rounded-lg object-cover"
-						/>
-						<div
-							class="absolute inset-0 flex items-center justify-center space-x-2 rounded-lg bg-black bg-opacity-50 opacity-0 transition-opacity group-hover:opacity-100"
-						>
-							<Button
-								type="button"
-								on:click={() => setThumbnail(index)}
-								class="bg-white text-sm text-black hover:bg-gray-200"
+		<!-- Image Previews -->
+		<div class="space-y-4">
+			{#if form.images && form.images.length > 0}
+				<div class="grid grid-cols-3 gap-4">
+					{#each form.images as image, index}
+						<div class="group relative">
+							<img
+								src={URL.createObjectURL(image)}
+								alt="Preview"
+								class="h-32 w-full rounded-lg object-cover"
+							/>
+							<div
+								class="absolute inset-0 flex items-center justify-center space-x-2 rounded-lg bg-black bg-opacity-50 opacity-0 transition-opacity group-hover:opacity-100"
 							>
-								{index === selectedThumbnailIndex ? 'Thumbnail' : 'Set as Thumbnail'}
-							</Button>
-							<Button
-								type="button"
-								on:click={() => removeImage(index)}
-								class="bg-white text-sm text-black hover:bg-gray-200"
-							>
-								Remove
-							</Button>
+								<Button
+									type="button"
+									on:click={() => setThumbnail(index)}
+									class="bg-white text-sm text-black hover:bg-gray-200"
+								>
+									{index === selectedThumbnailIndex ? 'Thumbnail' : 'Set as Thumbnail'}
+								</Button>
+								<Button
+									type="button"
+									on:click={() => removeImage(index)}
+									class="bg-white text-sm text-black hover:bg-gray-200"
+								>
+									Remove
+								</Button>
+							</div>
 						</div>
-					</div>
-				{/each}
-			</div>
-		{/if}
-	</div>
+					{/each}
+				</div>
+			{/if}
+		</div>
 
-	<Button disabled={loading} type="submit" class="flex w-full items-center justify-center gap-2"
-		>Register Business
-		{#if loading}
-			<Loader class="animate-spin" />
-		{/if}
-	</Button>
-</form>
+		<Button disabled={loading} type="submit" class="flex w-full items-center justify-center gap-2"
+			>Register Business
+			{#if loading}
+				<Loader class="animate-spin" />
+			{/if}
+		</Button>
+	</form>
 {:else}
-<div>
-	Thank you for submiting your business. we will reach out to you via email to complete the process!
-</div>
+	<div>
+		Thank you for submiting your business. we will reach out to you via email to complete the
+		process!
+	</div>
 {/if}
 
 <!-- Image Previews -->
